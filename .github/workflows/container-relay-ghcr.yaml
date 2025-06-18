@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  container-palomar-ghcr:
+  container-relay-ghcr:
     if: github.repository == 'j0904/indigo'
     runs-on: ubuntu-latest
     permissions:
@@ -38,7 +38,7 @@ jobs:
           images: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=sha,enable=true,priority=100,prefix=palomar:,suffix=,format=long
+            type=sha,enable=true,priority=100,prefix=replay:,suffix=,format=long
 
       - name: Build and push Docker image
         id: build-and-push
