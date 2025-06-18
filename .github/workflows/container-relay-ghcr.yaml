@@ -1,4 +1,4 @@
-name: container-palomar-ghcr
+name: container-relay-ghcr
 on: [push]
 env:
   REGISTRY: ghcr.io
